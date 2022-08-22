@@ -10,24 +10,20 @@ const App = ()=>{
       url:"https://fakestoreapi.com/products",
       method:"GET",
     }).then((data)=>{
-      setUsers([...users,data.data])
+      setUsers(data.data)
     }).catch((err)=>{
       console.log(err)
     })
   },[])
- 
+  console.log(users)
   const usersPerPage = 10;
    const pageVisited = pageNo * usersPerPage;
    const displayUsers = users
    .slice(pageVisited, pageVisited + usersPerPage)
-   .map((user,i) => {
-    console.log(user[i])
+   .map((user) => {
+    console.log(user)
      return (
-          
-         <img src={user[i].image} width="60px" height="60px"></img>
-         
-         
-  
+         <img src={user.image} width="60px" height="60px"></img>
      );
    });
 
