@@ -51,11 +51,7 @@ const pageCount = Math.ceil(users.length / usersPerPage)
     nextLabel={"next"}
     pageCount={pageCount}
     onPageChange={changePage}
-    containerClassName={"paginattionbtn"}
-    previousLinkClassName={"previousBttn"}
-    nextLinkClassName={"nextBttn"}
-    disabledClassName={"paginationDisabled"}
-    activeClassName={"paginationActive"}
+    
     ></Reactpaginate>
   </div>)
 
